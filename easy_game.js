@@ -12,22 +12,29 @@ function startGame() {
 }
 
 function keyListener(event) {
-    if (gameOver) return;
-    
-    console.log(event.key);
+    if (gameOver) {
+        if (event.key === "r") {
+            startGame();
+        }
+        else {
+            return;
+        }
+    }
+
     jump();
 }
 
 var isJumping = false;
 function jump() {
-    if(!isJumping) {
-        character.classList.add("jump-animation");
-        isJumping = true;
-        setTimeout(() => {
-            character.classList.remove("jump-animation");
-            isJumping = false;
-        }, 700);
-    }
+    if (isJumping) return;
+    
+    isJumping = true;
+    character.classList.add("jump-animation");
+    setTimeout(() => {
+        character.classList.remove("jump-animation");
+        isJumping = false;
+    }, 700);
+    
 }
 
 function checkCollision() {

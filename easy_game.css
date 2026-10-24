@@ -70,16 +70,15 @@
 /* Animations */
 @keyframes jump {
     0% {
-        bottom: 10px;
+        bottom: 15px;
     }
     50% {
         bottom: 120px;
         transform: rotate(180deg);
         scale: 1.3;
-        transition: ease-in-out;
     }
     100% {
-        bottom: 10px;
+        bottom: 15px;
         transform: rotate(360deg);
     }
 

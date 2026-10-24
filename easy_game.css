@@ -16,7 +16,7 @@
     background-position: center;
 }
 
-#character{
+#bread_character{
     width: 50px;
     height: 40px;
 
@@ -39,7 +39,7 @@
     animation-iteration-count: 1;
 }
 
-#block{
+#mouth_enemy{
     width: 40px;
     height: 60px;
     
@@ -65,6 +65,15 @@
     font-size: 20px;
     font-weight: bold;
     color: white;
+}
+
+.middle{
+    position: absolute;
+    top: 115px;
+    left: 80px;
+    font-size: 70px;
+    font-weight: bold;
+    color: rgba(255, 0, 0, 0.753);
 }
 
 /* Animations */

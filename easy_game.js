@@ -3,6 +3,8 @@ var block = document.getElementById("block");
 var gameOver = false;
 
 addEventListener("keypress", keyListener);
+document.addEventListener("pointerdown", keyListener);
+
 document.getElementById("startButton").addEventListener("click", startGame);
 
 function startGame() {

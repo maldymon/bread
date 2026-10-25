@@ -38,7 +38,7 @@ function jump() {
 
 
 /* Restart the game when clicking restart button */
-document.getElementById("startButton").addEventListener("click", startGame);
+document.getElementById("restartButton").addEventListener("click", startGame);
 function startGame() {
     window.location.reload();
 }

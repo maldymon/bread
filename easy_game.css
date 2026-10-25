@@ -104,5 +104,37 @@
     right: 10px;
     font-size: 30px;
     font-weight: bold;
-    color: rgb(255, 234, 44);
+    color: rgb(240, 183, 29);
+}
+
+/* Restart button */
+#restartButton {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(240, 183, 29);
+    background-color: rgb(247, 227, 190);
+    padding: 3px;
+    border: 3px solid rgb(240, 183, 29);
+    cursor: pointer;
+    transition: background-color 180ms ease, color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+}
+
+#restartButton:hover {
+    color: rgb(247, 227, 190);
+    background-color: rgb(180, 125, 16);
+    transform: translateY(-2px);
+    box-shadow: 0 3px 8px rgb(0 0 0 / 25%);
+}
+
+#restartButton:active {
+    transform: translateY(1px);
+    box-shadow: none;
+}
+
+#restartButton:focus-visible {
+    outline: 3px solid black;
+    outline-offset: 3px;
 }

@@ -83,7 +83,7 @@
 
 /* Animation */
 @keyframes move_horizontal {
-    from {left: 100%;}
+    from {left: calc(100% - 40px);}
     to {left: 0%;}
 }
 

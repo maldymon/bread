@@ -58,7 +58,7 @@ function checkCollision() {
             gameOver = true;
             bread_character.style.backgroundImage = "url('images/bread_crumbs.png')";
             mouth_enemy.style.animationPlayState = "paused";
-            document.querySelector(".middle").textContent = "GAME OVER";
+            document.getElementById("game_over").textContent = "GAME OVER";
         }
 /* Increase score each time the enemy animation starts over.
    Increase enemy speed each 5 points scored. */

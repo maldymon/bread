@@ -87,13 +87,15 @@
     to {left: 0%;}
 }
 
-.middle{
+/* Game over text */
+#game_over {
     position: absolute;
-    top: 115px;
-    left: 80px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-size: 70px;
     font-weight: bold;
-    color: rgba(255, 0, 0, 0.753);
+    color: rgba(255, 24, 24, 0.753);
 }
 
 /* Score text */

@@ -76,7 +76,7 @@
 
     /* Animation */
     animation-name: move_horizontal;
-    animation-duration: 1000ms;
+    animation-duration: 1500ms;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
@@ -90,8 +90,8 @@
     color: white;
 /* Animation */
 @keyframes move_horizontal {
-    from {left: 560px;}
-    to {left: 0px;}
+    from {left: 100%;}
+    to {left: 0%;}
 }
 
 .middle{

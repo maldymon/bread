@@ -5,12 +5,6 @@ var gameOver = false;
 addEventListener("keypress", keyListener);
 document.addEventListener("pointerdown", keyListener);
 document.getElementById("startButton").addEventListener("click", startGame);
-mouth_enemy.addEventListener("animationiteration", updateScore);
-
-function updateScore() {
-    var score = document.getElementById("score");
-    score.textContent = parseInt(score.textContent) + 1;
-}
 
 function startGame() {
     window.location.reload();
@@ -66,6 +60,31 @@ function checkCollision() {
             mouth_enemy.style.animationPlayState = "paused";
             document.querySelector(".middle").textContent = "GAME OVER";
         }
+/* Increase score each time the enemy animation starts over.
+   Increase enemy speed each 5 points scored. */
+mouth_enemy.addEventListener("animationiteration", updateScore);
+function updateScore() {
+    const score = document.getElementById("score");
+
+    /* Increase score with 1 point */
+    score.textContent = parseInt(score.textContent) + 1;
+
+    /* For each 5 points scored, the speed of the enemy will increase */
+    if (parseInt(score.textContent) % 5 == 0) {
+
+        mouth_enemy.style.animationName = "none"; /* Stop animation */
+
+        /* Calculate new speed */
+        let duration_int = getComputedStyle(mouth_enemy).animationDuration;
+        let duration_ms = parseFloat(duration_int) * (duration_int.endsWith("ms") ? 1 : 1000);
+        let new_speed_int = duration_ms-100;
+        let new_speed_str = new_speed_int.toString()+"ms";
+
+        console.log("New speed ", new_speed_str)
+
+        mouth_enemy.style.animationDuration = new_speed_str; /* Update to new animation speed */
+
+        mouth_enemy.style.animationName = "move_horizontal"; /* Restart animation with new speed */
     }
 }
 

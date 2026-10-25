@@ -1,12 +1,15 @@
 *{
-    padding: 0;
-    margin: 0;
+    padding: 1px;
+    margin: 1px;
 }
 
-#game{
-    width: 600px;
-    height: 300px;
-    border: 1px solid black;
+#game {
+    width: 170vh;       /* 170 % of screen height */
+    max-width: 100vw;   /* Full screen width */
+    height: 90vh;       /* 90 % of screen height */
+    max-height: 100vh;
+    max-height: 600px;
+    border: 2px solid black;
     position: relative;
 
     /* Background image */
